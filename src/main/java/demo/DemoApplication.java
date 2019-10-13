@@ -22,23 +22,19 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@Bean
-	ApplicationRunner init(PersonRepository repository) {
+	// @Bean
+	// ApplicationRunner init(PersonRepository repository) {
 
-		HashMap<Integer, String> data = new HashMap<>();
-		data.put(1, "Forest");
-		data.put(2, "John");
+	// 	HashMap<Integer, String> data = new HashMap<>();
+	// 	data.put(1, "Forest");
+	// 	data.put(2, "John");
 
-		return args -> {
-			// Stream.of(data).forEach(array -> {
-			// 	Person person = new Person(array.getKey(), array.getValue());
-			// });
-			// repository.findAll().forEach(System.out::println);
-			data.forEach((k,v) -> {
-				Person person = new Person(k,v);
-			});
-			repository.findAll().forEach(System.out::println);
-		};
-	}
+	// 	return args -> {
+	// 		data.forEach((k,v) -> {
+	// 			Person person = new Person(k,v);
+	// 		});
+	// 		repository.findAll().forEach(System.out::println);
+	// 	};
+	// }
 
 }
