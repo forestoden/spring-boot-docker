@@ -24,11 +24,6 @@ public class DemoApplication {
 
 	@Bean
 	ApplicationRunner init(PersonRepository repository) {
-		// String[][] data = {
-		// 	{"1", "Forest"},
-		// 	{"2", "John"},
-		// 	{"3", "Steven"}
-		// };
 
 		HashMap<Integer, String> data = new HashMap<>();
 		data.put(1, "Forest");
