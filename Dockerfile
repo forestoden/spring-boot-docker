@@ -3,10 +3,8 @@ FROM maven:3-jdk-11 as build
 RUN mkdir -p /build
 WORKDIR /build
 COPY pom.xml /build
-
 #Download all required dependencies into one layer
 RUN mvn -B dependency:resolve dependency:resolve-plugins
-
 COPY src /build/src
 RUN mvn package
 
